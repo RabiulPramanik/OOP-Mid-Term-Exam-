@@ -1,5 +1,3 @@
-import os
-
 class Star_Cinema:
     __hall_list = []
 
@@ -59,20 +57,16 @@ while True:
     print("5. Exit ! ")
     op = int(input("Enter your Option: "))
     if op ==1:
-        os.system('cls')
         h1.view_show_list()
     elif op ==2:
-        os.system('cls')
         hid = int(input("Enter Hall Id: "))
         h1.view_available_seats(hid)
     elif op == 3:
-        os.system('cls')
         hid = int(input("Enter Hall Id: "))
         row = int(input("Enter Row: "))
         col = int(input("Enter Colum: "))
         h1.book_seats(hid,(row,col))
     elif op == 4:
-        os.system('cls')
         hid = int(input("Enter Hall Id: "))
         m_name = input("Enter Movie name : ")
         time = input("Enter Time: ")
