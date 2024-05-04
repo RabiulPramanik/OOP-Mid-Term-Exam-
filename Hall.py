@@ -38,8 +38,11 @@ class Hall(Star_Cinema):
         print("Please Enter Right information ! ")
 
     def view_show_list(self):
+        print("\n*****Show List*****")
+        print("___________________")
         for k in self.__show_list:
-            print(f'{k[0]} {k[1]} {k[2]}')
+            print(f'Hall_no:-->> {k[0]}\nMovie_Name:-->> {k[1]}\nTime:-->> {k[2]}')
+            print("___________________")
 
     def view_available_seats(self, id):
         for k, v in self.__seats.items():
@@ -67,15 +70,16 @@ while True:
         col = int(input("Enter Colum: "))
         h1.book_seats(hid,(row,col))
     elif op == 4:
-        hid = int(input("Enter Hall Id: "))
+        # hid = int(input("Enter Hall Id: "))
         m_name = input("Enter Movie name : ")
         time = input("Enter Time: ")
-        h1.entry_show(hid,m_name,time)
+        h1.entry_show(111,m_name,time)
     elif op == 5:
         break
     else:
         print("This is Wrong Option ! ")
     
+
 
 
 
